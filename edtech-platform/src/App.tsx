@@ -9,6 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from './components/ui/alert';
 import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
 import { Separator } from './components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import { HeroShapes } from './components/ui/hero-shapes';
 import { Info } from 'lucide-react';
 
 function App() {
@@ -201,6 +202,32 @@ function App() {
             </Card>
           </div>
         </section>
+
+        <Separator />
+
+        {/* Textures & Shapes */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-semibold tracking-tight">Textures & Shapes</h2>
+          <Card>
+            <CardHeader>
+              <CardTitle>Grid Paper & Floating Elements</CardTitle>
+              <CardDescription>
+                These backgrounds can be placed inside any relative container with overflow hidden.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="relative w-full h-[400px] overflow-hidden rounded-xl border bg-white">
+                <HeroShapes variant="home" />
+                <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                  <Badge variant="outline" className="bg-white/80 backdrop-blur">
+                    Texture Example
+                  </Badge>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
       </div>
     </div>
   );
